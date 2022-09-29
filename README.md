@@ -1,15 +1,14 @@
-# HelloCube
+# Logos
 
-![Screenshot](https://user-images.githubusercontent.com/22283943/190863713-b00a2fd5-5b8c-413f-95de-04ce951be8c3.png)
-
-This is a minimal example for using [RavEngine](https://github.com/RavEngine/RavEngine). See `main.cpp` for a thoroughly-commented minimum app.
+Used for generating the logo for RavEngine.
 
 ### Building
 ```sh
-git clone https://github.com/RavEngine/HelloCube --depth=1 --recurse-submodules
+git clone https://github.com/RavEngine/Logos --depth=1 --recurse-submodules
 mkdir build
 cd build
-cmake ..
+cmake -DCMAKE_BUILD_TYPE=Release ..
+cmake --build . --config release --target install
 ```
 
 ### More Sample Programs

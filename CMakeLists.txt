@@ -6,12 +6,12 @@ set(CMAKE_INSTALL_PREFIX ${CMAKE_CURRENT_BINARY_DIR})
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/$<CONFIGURATION>)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/$<CONFIGURATION>)
 
-PROJECT(HelloCube)
+PROJECT(RavEngineLogos)
 
 add_subdirectory("RavEngine") # configure the engine library
 
 # configure your executable like normal
-file(GLOB SOURCES "*.cpp" "*.hpp" "*.h")
+file(GLOB SOURCES "src/*.cpp" "src/*.hpp" "src/*.h")
 add_executable("${PROJECT_NAME}" ${SOURCES})
 target_link_libraries("${PROJECT_NAME}" PUBLIC "RavEngine" )  # also adds header includes
 target_compile_features("${PROJECT_NAME}" PRIVATE cxx_std_20)  # require C++20
